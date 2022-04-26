@@ -6,10 +6,7 @@
 body {
   background-color: rgb(106, 31, 117);
   font-family: 'Noto Sans KR', sans-serif;
-  /* display: flex;
-  justify-content: center;
   height: 100vh;
-  overflow: auto; */
   margin: 0;
 }
 
@@ -62,6 +59,8 @@ body {
 }
 
 .document {
+  height: 70%;
+  overflow-y: auto;
   background-color: white;
   margin: 30px 50px;
   border-radius: 10px;
