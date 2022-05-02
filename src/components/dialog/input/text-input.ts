@@ -1,17 +1,21 @@
 import { BaseComponent } from '../../component.js';
+import { TextData } from '../dialog.js';
 
-export class TextSectionInput extends BaseComponent<HTMLElement> {
+export class TextSectionInput
+  extends BaseComponent<HTMLElement>
+  implements TextData
+{
   constructor() {
-    super(`<div>
+    super(`<div class="form">
              <div class="form__container">
-                 <label for="title">Title</label>
-                <input type="text" id="title" />
-            </div>
-            <div class="form__container">
-                <label for="body">Body</label>
-                <textara type="text" row=3 id="vody" />
-             </div>
-      </div>`);
+                    <label for="title">TITLE</label>
+                    <input type="text" id="title" />
+                </div>
+                <div class="form__container">
+                    <label for="body">BODY</label>
+                    <textarea type="text" row="3" id="body"></textarea>
+                </div>
+            </div>`);
   }
 
   get title(): string {
@@ -19,7 +23,7 @@ export class TextSectionInput extends BaseComponent<HTMLElement> {
     return element.value;
   }
 
-  get url(): string {
+  get body(): string {
     const element = this.element.querySelector('#body')! as HTMLInputElement;
     return element.value;
   }

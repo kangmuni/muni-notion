@@ -4,10 +4,75 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgb(106, 31, 117);
   font-family: 'Noto Sans KR', sans-serif;
   height: 100vh;
   margin: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  height: 30px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: rgba(192, 188, 188, 0.2);
+}
+
+textarea {
+  height: 50px;
+  font-size: 0.9rem;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 35%;
+  width: 30%;
+  height: 25%;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 1;
+  text-align: center;
+  border: none;
+}
+
+.dialog__close,
+.dialog__submit {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  border: none;
+}
+
+.dialog__close {
+  border-radius: 20px 20px 0 0;
+}
+
+.dialog__submit {
+  border-radius: 0 0 20px 20px;
+}
+
+#dialog__body {
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+}
+
+.form__container {
+  width: 100%;
+  height: 100%;
 }
 
 .app {
@@ -61,10 +126,13 @@ body {
 .document {
   height: 70%;
   overflow-y: auto;
-  background-color: white;
   margin: 30px 50px;
   border-radius: 10px;
   padding: 10px;
+}
+
+.page-item {
+  background-color: white;
 }
 
 .footer {
