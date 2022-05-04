@@ -17,7 +17,6 @@ input,
 textarea {
   width: 100%;
   height: 30px;
-  font-size: 1.1rem;
   border: none;
   background-color: rgba(192, 188, 188, 0.2);
 }
@@ -25,6 +24,15 @@ textarea {
 textarea {
   height: 50px;
   font-size: 0.9rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 0;
 }
 
 .dialog {
@@ -131,8 +139,80 @@ textarea {
   padding: 10px;
 }
 
+.document::-webkit-scrollbar-thumb {
+  color: aqua;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
 .page-item {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
   background-color: white;
+}
+
+.page-item__body {
+  flex: 1 1 95%;
+}
+
+.page-item__controls {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  flex: 1 1 5%;
+}
+
+.close {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 7px;
+  font-size: 25px;
+  background-color: white;
+  color: rgb(106, 31, 117);
+}
+
+.close:hover {
+  color: orangered;
+}
+
+.image,
+.video,
+.note,
+.todo {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.image__title,
+.video__title,
+.note__body,
+.todo-label {
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.video__iframe {
+  width: 600px;
+  height: 300px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.todo-checkbox {
+  width: auto;
 }
 
 .footer {
