@@ -224,3 +224,27 @@ li {
   font-size: 10px;
   text-align: center;
 }
+
+/* Drag and Drop */
+
+.mute-children * {
+  pointer-events: none;
+}
+
+.lifted {
+  animation: drag_start 300ms;
+  opacity: 0.5;
+}
+
+@keyframes drag_start {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.drop-area {
+  border: 3px solid rgb(255, 72, 0);
+}
